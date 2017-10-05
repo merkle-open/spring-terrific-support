@@ -1,0 +1,208 @@
+body { 
+    font-family: Lucida Grande;
+    font-size: 18px;
+    color: #2f2f2f;
+    width: 1024px;
+}
+/* Layout */
+
+.line {
+    float: left;
+    width: 100%;
+}
+
+.lineBorder {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 38px;
+}
+
+.size1of5 {
+    float: left;
+    width: 20%;
+}
+
+.size4of5 {
+    float: left;
+    width: 80%;
+}
+.size1of2 {
+    float: left;
+    width: 50%;
+}
+.size1of3 {
+    float: left;
+    width: 33.333333%;
+}
+.size1of4 {
+    float: left;
+    width: 25%;
+}
+.size3of4 {
+    float: left;
+    width: 75%;
+}
+
+/* Headings */
+h1 {
+    font-size: 25px;
+    margin-bottom: 22px;
+    color: #141414;
+}
+h2 {
+    margin-bottom: 25px;
+    color: #2f2f2f;
+}
+
+/* Links */
+a {
+        color: #fd6600;
+        font-size: 15px;
+        text-decoration: none;
+    }
+/* Forms */
+fieldset {
+    margin: 0 0 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+fieldset.rowItems,
+.rowItems label {
+    display: inline;
+    padding-right: 16px;
+}
+
+.rowItems label:first-child {
+    padding-right: 10px;
+}
+
+.input {
+    height: 34px;
+    width: 308px;
+    border: 1px solid #bebebe;
+}
+.styledSelect {
+   width: 222px;
+   height: 34px;
+   overflow: hidden;
+   background: transparent url(/assets/img/sprites/sprite-icons.png) no-repeat 100% -76px ;
+   border: 1px solid #bebebe;
+   display: inline-block;
+}
+
+.styledSelect select {
+   background: transparent;
+   width: 222px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   outline: 0;
+}
+
+select {
+    height: 34px;
+    width: 308px;
+}
+
+.small {
+    width: 44px;
+}
+.medium {
+    width: 86px;
+}
+.small,
+.medium {
+    padding-left: 10px;
+}
+.styledSelect.large,
+.styledSelect.large select {
+    width: 308px;
+}
+
+input[type="checkbox"] {
+    /*border: 0;
+    -khtml-appearance: none;
+ width: 23px;
+ height: 23px;
+ vertical-align: middle;
+    background: url("/assets/img/sprites/sprite-icons.png") no-repeat 0 -50px transparent;*/
+}
+
+/* Buttons */
+
+
+input[type="button"] {
+    color: #fff;
+    border: 0;
+    height: 40px;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    margin-left: -10px;
+    padding: 0 20px;
+}
+
+.buttons {
+    float: left;
+    margin-top: 32px;
+}
+.buttonWrap {
+    float: left;
+    margin-left: 14px;
+}
+
+.buttons span {
+    display: block;
+    background: url("/assets/img/sprites/sprite-buttons.png") no-repeat right -243px transparent;
+    
+}
+
+.buttons span.defaultRight {
+    background-position: right -288px;
+}
+.buttons span.next {
+    background-position: right -288px;
+}
+.buttons span.previous {
+    background-position: right -333px;
+}
+.buttons span.new {
+    background-position: right -378px;
+}
+.buttons span.defer {
+    background-position: right -423px;
+}
+.buttons span.defaultPreview {
+    background-position: right -468px;
+}
+
+.buttons span input[type="button"] {
+    background: url("/assets/img/sprites/sprite-buttons.png") no-repeat 0 0 transparent;
+}
+
+
+.buttons span.previous input[type="button"] {
+    background-position: 0 -48px;
+    margin-left: -17px;
+    color: #141414;
+}
+
+.buttons span.new input[type="button"] {
+    background-position: 0 -96px;
+    color: #fff;
+}
+.buttons span.defer input[type="button"] {
+    background-position: 0 -143px;
+    color: #fff;
+}
+.buttons span.defaultPreview input[type="button"] {
+    padding-right: 40px;
+}
+

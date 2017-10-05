@@ -1,0 +1,24 @@
+<html>
+
+<head data-th-replace="views/_partials/html-head :: head(title='Spring Terrific Support Java Config - User Form')">
+	<?php partial('html-head', array('title' => 'Spring Terrific Support Java Config - User Form'));?>
+</head>
+
+<body>
+
+<th-block data-th-replace="modules/Navigation/navigation :: #navigation">
+	<?php module('Navigation');?>
+</th-block>
+
+<div class="container">
+	<th-block data-th-replace="modules/UserForm/user-form">
+		<?php module('UserForm');?>
+	</th-block>
+</div>
+
+<th-block data-th-replace="views/_partials/html-scripts :: scripts">
+	<?php partial('html-scripts');?>
+</th-block>
+
+</body>
+</html>

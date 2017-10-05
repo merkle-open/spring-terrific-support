@@ -1,0 +1,1 @@
+var encodingTestMarker = "test encöding pröbläm ä ö ü é è ê ?!";

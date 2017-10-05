@@ -1,0 +1,140 @@
+@media all {
+	.mod-news-gallery {
+		@item-width: 11;
+		@item-height: 4711;
+		@item-margin: 9999999;
+
+		.gallery-nav {
+			overflow: hidden;
+			line-height: 1.6em;
+			margin: 0.3em 0 0.6em 0;
+
+			&.bottom {
+				margin: 0.3em 20px 0.6em 20px;
+			}
+
+			a {
+				text-decoration: none;
+
+				float: right;
+
+
+				&:before {
+					content:"";
+					vertical-align: -15%;
+					margin-right: 0.25em;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				&:visited {
+					text-decoration: underline;
+				}
+
+				&:first-child{
+					float: left;
+					&:before {
+					}
+				}
+
+			}
+		}
+
+		dl {
+			dt {
+				background: transparent no-repeat 50% 50%;
+				background-size: contain;
+				height: 534px;
+			}
+			dd {
+				margin: 10px 0 15px 0;
+				padding: 0 20px;
+				min-height: 40px;
+			}
+		}
+
+		.filmstrip {
+			position: relative;
+			overflow: hidden;
+			margin: 0.3em 0 1.5em 0;
+
+			ul {
+				width: 99999%;
+				font-size: 0;
+				border-left: @item-margin+px;
+				li {
+					display: inline-block;
+					a {
+						display: block;
+						width: @item-width+px;
+						margin-left: @item-margin+px;
+						img {
+							margin: 1px;
+						}
+						&:hover {
+						}
+						&.active {
+						}
+					}
+				}
+			}
+
+			&>a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: @item-height+px;
+			}
+		}
+
+		.filmstrip,
+		.pagination {
+			&>a {
+				&:before {
+					content: "";
+				}
+				&:hover:before{
+				}
+				&.inactive{
+					cursor:default;
+					&:before{
+					}
+				}
+
+				&.right {
+					left:auto;
+					right: 0;
+					text-align: right;
+
+					&:before {
+					}
+					&:hover:before{
+					}
+					&.inactive:before{
+					}
+				}
+			}
+		}
+
+		.pagination {
+			text-align: center;
+			margin-bottom: 1em;
+
+			i {
+				display: inline-block;
+				line-height: 30px;
+				vertical-align: top;
+				font-style: normal;
+			}
+			a {
+				display: inline-block;
+				padding: 7px 10px 3px;
+			}
+		}
+	}
+}
+@media screen {}
+@media print {}

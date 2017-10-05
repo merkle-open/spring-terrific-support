@@ -1,0 +1,13 @@
+/* @group Module: example */
+@media all {
+
+    .mod-example {
+        
+    }
+
+    .mod-example a {
+        color: red;
+    }
+
+}
+/* @end */

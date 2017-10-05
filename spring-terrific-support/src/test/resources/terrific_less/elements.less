@@ -1,0 +1,69 @@
+
+// place only global styles here, use default.less or cremesso.less for site specifics
+
+// TODO fonts, headings, ...
+body {
+	font-family: Arial, Sans-Serif;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+// grid
+.line,
+.lastUnit {
+	overflow: hidden;
+}
+.lastUnit {
+	float: none;
+	width: auto;
+}
+.unit {
+	float: left;
+}
+// 10 x 120px, 8px gutter, 4px margin -> 1280 total, 1272 content
+.size1of1 {
+	float: none;
+}
+.size1of2 {
+	width: 50%;
+}
+.size1of10 {
+	width: 128px;
+}
+.size2of10 {
+	width: 256px;
+}
+.size6of10 {
+	width: 760px;
+}
+
+// centering content with unknown width
+.centeringContainer {
+	text-align: center;
+}
+.centered {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// icon base
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inline-block;
+	margin-top: 1px;
+	width: 14px;// todo most common dimensions?
+	height: 14px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background: url(assets/img/sprites-x.png) 14px 14px no-repeat;
+}
+
+h1 {
+	font-family: 'Neue Helvetica Medium Condensed',helvetica,arial,sans-serif;
+	font-size: 42px;
+}
+h2 {
+	font-family: 'Neue Helvetica Medium Condensed',helvetica,arial,sans-serif;
+	font-size: 24px;
+}
