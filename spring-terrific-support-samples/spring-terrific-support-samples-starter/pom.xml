@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.namics.oss.spring.support.terrific</groupId>
 		<artifactId>spring-terrific-support-samples</artifactId>
-		<version>1.0.0</version>
+		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>spring-terrific-support-samples-starter</artifactId>
