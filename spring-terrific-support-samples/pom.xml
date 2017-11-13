@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.namics.oss.spring.support.terrific</groupId>
+        <artifactId>spring-terrific-support-pom</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>spring-terrific-support-samples</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-terrific-support-samples-servlet25</module>
+        <module>spring-terrific-support-samples-javaconfig</module>
+        <module>spring-terrific-support-samples-starter</module>
+    </modules>
+</project>

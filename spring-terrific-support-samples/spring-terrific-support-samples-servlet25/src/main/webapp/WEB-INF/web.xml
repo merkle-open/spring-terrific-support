@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+	<distributable />
+
+	<display-name>spring-terrific-demo</display-name>
+
+	<!-- - Location of the XML file that defines the root application context. 
+		- Applied by ContextLoaderServlet. -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:/META-INF/spring/demo-*.xml
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<description>
+			Application-wide html escaping setting.
+		</description>
+		<param-name>defaultHtmlEscape</param-name>
+		<param-value>false</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- ================ FILTER DEFINITIONS ================ -->
+
+	<!-- Character Encoding. -->
+	<filter>
+		<filter-name>charsetFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>cacheHeaderFilter365</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<async-supported>true</async-supported>
+	</filter>
+	<filter>
+		<filter-name>cacheHeaderFilter1</filter-name>
+		<filter-class>com.namics.oss.spring.support.terrific.filter.ResponseHeaderFilter</filter-class>
+		<async-supported>true</async-supported>
+		<init-param>
+			<param-name>Cache-Control</param-name>
+			<param-value>public, max-age=86400</param-value>
+		</init-param>
+	</filter>
+	
+
+	<filter>
+		<display-name>Terrific Filter</display-name>
+		<filter-name>terrificFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<async-supported>true</async-supported>
+	</filter>
+
+	
+	
+	<!-- ================ SERVLET DEFINITIONS ================ -->
+		
+	<servlet>
+		<servlet-name>demo</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+		<async-supported>true</async-supported>
+	</servlet>	
+	<!-- ================ FILTER MAPPING ================ -->
+
+	<filter-mapping>
+		<filter-name>charsetFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>cacheHeaderFilter1</filter-name>
+		<url-pattern>/terrific/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>cacheHeaderFilter365</filter-name>
+		<url-pattern>/terrific/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>terrificFilter</filter-name>
+		<url-pattern>/terrific/*</url-pattern>
+	</filter-mapping>
+
+	<!-- ================ SERVLET MAPPING ================ -->
+		
+	<servlet-mapping>
+		<servlet-name>demo</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+		
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- The time to hold session states active -->
+	<session-config>
+		<session-timeout>10</session-timeout>
+	    <tracking-mode>COOKIE</tracking-mode>
+	</session-config>
+</web-app>

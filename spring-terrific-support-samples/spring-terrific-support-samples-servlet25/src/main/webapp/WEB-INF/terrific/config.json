@@ -1,0 +1,25 @@
+{
+	"base" : "/WEB-INF/terrific",
+	"scan" : [
+		"/assets/**",
+		"/modules/**"
+	],
+	"assets" : {
+		"main.css": [
+			"bootstrap.css",
+			"bootstrap-responsive.css",
+			"jquery.tablesorter.less",
+			"demo.less",
+			"*.css",
+			"*.less"
+		],
+		"main.js": [
+			"encoding-test.js",
+			"jquery-1.9.1.js",
+			"terrific-2.0.1.js",
+			"bootstrap.js",
+			"jquery.helper.js",
+			"*.js"
+		]
+	}
+}

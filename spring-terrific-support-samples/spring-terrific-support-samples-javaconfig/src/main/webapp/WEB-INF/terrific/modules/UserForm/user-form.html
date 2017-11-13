@@ -1,0 +1,24 @@
+<div class="mod mod-user-form" data-connectors="1">
+	<form data-th-object="${user}"
+		  data-th-action="@{/users/{username}(username=${user.username != null ? user.username : -1})}"
+		  method="post">
+		<div>
+			<label for="username" data-th-classappend="${#fields.hasErrors('username')}? 'err'">Username</label>
+			<input id="username" type="text" data-th-field="*{username}" data-th-classappend="${#fields.hasErrors('username')}? 'err'"/>
+			<span class="err" data-th-if="${#fields.hasErrors('username')}" data-th-errors="*{username}">Error</span>
+		</div>
+		<div>
+			<label for="firstname" data-th-classappend="${#fields.hasErrors('firstname')}? 'err'">Firstname</label>
+			<input id="firstname" type="text" data-th-field="*{firstname}" data-th-classappend="${#fields.hasErrors('firstname')}? 'err'" />
+			<span class="err" data-th-if="${#fields.hasErrors('firstname')}" data-th-errors="*{firstname}">Error</span>
+		</div>
+		<div>
+			<label for="lastname" data-th-classappend="${#fields.hasErrors('lastname')}? 'err'">Lastname</label>
+			<input id="lastname" type="text" data-th-field="*{lastname}" data-th-classappend="${#fields.hasErrors('lastname')}? 'err'"/>
+			<span class="err" data-th-if="${#fields.hasErrors('lastname')}" data-th-errors="*{lastname}">Error</span>
+		</div>
+		<div>
+			<input type="submit" />
+		</div>
+	</form>
+</div>

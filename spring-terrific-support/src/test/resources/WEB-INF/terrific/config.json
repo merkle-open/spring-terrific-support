@@ -1,0 +1,34 @@
+{
+	"base" : "/WEB-INF/terrific",
+	"assets" : {
+		"main.ie6.css": [
+			"assets/**/*.ie6.css"
+		],
+		"main.ie7.css": [
+			"assets/css/*.ie7.css"
+		],
+		"main.ie8.css": [
+			"assets/**/*.ie8.css"
+		],
+		"main.ie9.css": [
+			"assets/**/*.ie9.css"
+		],
+	    "main.css": [
+	        "assets/**/css_s1.css",
+	        "assets/css/css_s2.less",
+	        "assets/**/*.css",
+	        "assets/**/*.less",
+			"modules/**/*.css",
+			"modules/**/*.less",
+	        "!assets/**/*.ie*.css",
+            "!modules/**/exclude/*",
+	        "+assets/**/include.less"
+	    ],
+	    "main.js": [
+	        "assets/**/js_s2.js",
+	        "assets/js/js_s1.js",
+	        "assets/js/*.js",
+	        "modules/**/*.js"
+	    ]
+    }
+}

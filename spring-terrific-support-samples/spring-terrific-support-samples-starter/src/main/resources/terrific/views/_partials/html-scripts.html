@@ -1,0 +1,14 @@
+<th-block data-th-fragment="scripts">
+
+	<!-- Load all javascript in single file -->
+	<script src="/main.js" data-th-src="@{'/terrific/'+ ${@assetVersion} + '/main.js'}"></script>
+	<script>
+		(function ($) {
+			$(document).ready(function () {
+				var application = new Tc.Application($(document), {});
+				application.registerModules();
+				application.start();
+			});
+		})(Tc.$);
+	</script>
+</th-block>
