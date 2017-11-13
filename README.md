@@ -12,7 +12,7 @@ Library to support the terrific integration in a spring mvc web applications.
 
 ### Known Issues
 
-The minification feature of the module does not work in this release! 
+The minification feature of the module does not work in this release! If you use the starter module, ensure that the minify property is set to `false`.
 
 ### Maven Dependency (Latest Version in `pom.xml`):
 
